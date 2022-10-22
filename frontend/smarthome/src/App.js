@@ -1,13 +1,29 @@
 import "normalize.css";
 import "./App.css";
-import background from "./images/bg.jpg";
-import Header from "./components/header/header";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./components/home/home";
+import EnergyChart from "./components/energyChart/energyChart";
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <img src={background} alt="home background" className="background"></img>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/home">
+          <Home />
+        </Route>
+        <Route exact path="/comsumption">
+          <EnergyChart />
+        </Route>
+        <Route exact path="/advices">
+          <Home />
+        </Route>
+        <Route exact path="/about">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

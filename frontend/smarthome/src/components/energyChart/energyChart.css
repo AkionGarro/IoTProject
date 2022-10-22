@@ -1,0 +1,9 @@
+#root
+  > div
+  > div
+  > div
+  > svg
+  > g.recharts-layer.recharts-cartesian-axis.recharts-xAxis.xAxis
+  > g {
+  display: none;
+}

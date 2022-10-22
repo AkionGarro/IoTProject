@@ -9,10 +9,10 @@ function Header() {
         <div className="routes d-flex align-items-center">
           <img src={logo} alt="homeImage"></img>
           <ul className="nav justify-content-between">
-            <li>Home</li>
-            <li>Consumption</li>
-            <li>Advices</li>
-            <li>About Us</li>
+            <a href="/home">Home</a>
+            <a href="/comsumption">Consumption</a>
+            <a href="/advices">Advices</a>
+            <a href="/about">About Us</a>
           </ul>
         </div>
       </div>
