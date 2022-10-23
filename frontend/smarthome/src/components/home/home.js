@@ -5,7 +5,7 @@ import Header from "../header/header";
 
 function Home() {
   return (
-    <div className="home">
+    <div className="home d-flex flex-column align-items-center">
       <Header />
       <img src={background} alt="home background" className="background"></img>
     </div>

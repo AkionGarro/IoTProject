@@ -2,7 +2,7 @@ import React from "react";
 import dataset from "./dataset.json";
 import "./energyChart.css";
 import Header from "../header/header";
-import { PureComponent } from "react";
+
 import {
   BarChart,
   Bar,
@@ -18,7 +18,7 @@ function EnergyChart() {
     <div>
       <Header />
       <div className="d-flex flex-column align-items-center">
-        <h1>Energy Consumption</h1>
+        <h1>Month Consumption</h1>
         <BarChart
           className="chartEnergy"
           width={1000}
