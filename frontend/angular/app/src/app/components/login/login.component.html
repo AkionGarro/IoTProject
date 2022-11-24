@@ -1,0 +1,37 @@
+<div class="flex-center-center home">
+  <div class="login">
+    <h3>Smart Home Login</h3>
+    <img src="../../../assets/logo.png" alt="" class="logo" />
+
+    <form [formGroup]="formlogin" (ngSubmit)="onSubmit()">
+      <div class="inputs">
+        <label class="labels"> Usuario</label>
+        <input
+          type="text"
+          formControlName="user"
+          placeholder="Ingrese su nombre de usuario"
+          [ngClass]="{
+            'is-invalid': submitted && formlogin.controls['user'].errors
+          }"
+        />
+      </div>
+
+      <div class="inputs">
+        <label class="labels"> Contraseña</label>
+        <input
+          type="password"
+          formControlName="password"
+          placeholder="Ingrese su contraseña"
+          [ngClass]="{
+            'is-invalid': submitted && formlogin.controls['password'].errors
+          }"
+        />
+      </div>
+
+      <div>
+        <button class="btnLogin" (ngSubmit)="onSubmit()">Ingresar</button>
+        <button class="btnRegister" (click)="goRegister()">Registrarse</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -28,4 +28,10 @@ function Header() {
   );
 }
 
+function changeView(view) {
+  this.setState({
+    currentView: view,
+  });
+}
+
 export default Header;

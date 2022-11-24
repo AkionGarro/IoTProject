@@ -1,0 +1,53 @@
+li:hover {
+  cursor: pointer;
+}
+
+.navigation {
+  width: 90vw;
+  margin: 1rem auto;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.nav {
+  margin: 0 1rem;
+  gap: 2rem;
+}
+.nav a {
+  text-decoration: none;
+  color: #000;
+}
+.nav a:hover {
+  color: rgb(56, 0, 0);
+}
+
+.btn {
+  display: inline;
+}
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#loginBtn {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+#loginBtn:hover {
+  background-color: #e4e4e4;
+}
+#signBtn {
+  background-color: #2d9751;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+#signBtn:hover {
+  background-color: #1c5f32;
+}

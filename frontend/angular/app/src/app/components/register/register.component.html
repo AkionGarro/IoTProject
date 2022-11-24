@@ -1,0 +1,50 @@
+<div class="flex-center-center home">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="login">
+      <h3>Smart Home Register</h3>
+      <img src="../../../assets/logo.png" alt="" class="logo" />
+
+      <div class="d-flex">
+        <div class="inputs">
+          <label class="labels"> Usuario</label>
+          <input
+            formControlName="username"
+            type="text"
+            placeholder="Ingrese su usuario"
+            [ngClass]="{
+              'is-invalid':
+                submitted && registerForm.controls['username'].errors
+            }"
+          />
+          <label class="labels"> Correo</label>
+          <input
+            formControlName="email"
+            type="email"
+            placeholder="Ingrese su correo"
+            [ngClass]="{
+              'is-invalid': submitted && registerForm.controls['email'].errors
+            }"
+          />
+
+          <label class="labels"> Contraseña</label>
+          <input
+            type="password"
+            formControlName="password"
+            placeholder="Ingrese su contraseña"
+            [ngClass]="{
+              'is-invalid':
+                submitted && registerForm.controls['password'].errors
+            }"
+            minlength="8"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="submit" class="btnRegister" (ngSubmit)="onSubmit()">
+          Registrarse
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
