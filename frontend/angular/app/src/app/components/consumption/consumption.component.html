@@ -1,1 +1,51 @@
-<p>consumption works!</p>
+<app-header></app-header>
+<div class="new-device">
+  <h1>Smart Home Devices</h1>
+  <div class="d-flex justify-content-evenly">
+    <div class="d-flex flex-column align-items-center name">
+      <label for="deviceName">Device Name</label>
+      <input type="text" id="deviceName" />
+    </div>
+    <div class="d-flex flex-column align-items-center category">
+      <label for="">Category</label>
+      <select>
+        <option value="energy">Energy Device</option>
+        <option value="water">Water Device</option>
+      </select>
+    </div>
+  </div>
+
+  <button class="btn btn-primary" (click)="addDevice()">Add Device</button>
+</div>
+
+<div class="user-devices">
+  <h3>My Devices</h3>
+  <div class="d-flex justify-content-evenly">
+    <div class="devices-table">
+      <table class="table table-dark align-items-center">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Device</th>
+            <th scope="col">Category</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="items"
+            *ngFor="let device of devices; index as i"
+            (click)="detailsDevice()"
+          >
+            <td scope="row">{{ i + 1 }}</td>
+            <td>{{ device["name"] }}</td>
+            <td>{{ device["category"] }}</td>
+            <td>
+              <button class="btn btn-primary">Consume</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

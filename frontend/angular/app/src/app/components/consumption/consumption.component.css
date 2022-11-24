@@ -1,0 +1,82 @@
+.new-device {
+  width: 40vw;
+  background: linear-gradient(45deg, #20bf55, #01baef);
+  border: 1px solid #e3e3e3;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 1rem auto;
+}
+
+.new-device h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.new-device input {
+  width: 10rem;
+  height: 2rem;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  padding: 10px;
+}
+.new-device select {
+  width: 10rem;
+  height: 2rem;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+}
+.name,
+.category {
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  background-color: #4879ad;
+  border-color: #4879ad;
+  color: #fff;
+  width: 10rem;
+  height: 2.5rem;
+  border-radius: 4px;
+  margin: 1rem auto;
+  display: block;
+}
+.btn-primary:hover {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.user-devices {
+  width: 40vw;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 1rem auto;
+}
+.table {
+  width: 40rem;
+  margin: 1rem auto;
+  height: auto;
+  text-align: center;
+}
+td {
+  vertical-align: middle;
+}
+td:hover {
+  cursor: pointer;
+}
+tr:hover {
+  cursor: default;
+}
+
+tr {
+  /* height auto size */
+  height: auto;
+}
+h3 {
+  text-align: center;
+  margin: 0rem auto;
+}

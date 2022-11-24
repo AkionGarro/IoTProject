@@ -13,6 +13,6 @@ export class HeaderComponent implements OnInit {
 
   signOut() {
     localStorage.removeItem('localUser');
-    this.router.navigate(['/login']);
+    this.router.navigate(['/home']);
   }
 }
