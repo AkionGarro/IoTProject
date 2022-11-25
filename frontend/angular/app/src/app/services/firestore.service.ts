@@ -27,4 +27,7 @@ export class FirestoreService {
   getDeviceById(id: any): Observable<any> {
     return this.client.post(this.BASE_URL + 'getDeviceById', id);
   }
+  getMeasurementById(id: any): Observable<any> {
+    return this.client.post(this.BASE_URL + 'getMeasurementById', id);
+  }
 }

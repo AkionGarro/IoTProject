@@ -6,3 +6,22 @@
   margin-right: 2rem;
   margin-top: 2rem;
 }
+
+.price-data {
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2rem auto;
+  background: linear-gradient(rgb(44, 44, 99) 0%, rgb(24, 126, 146) 0%);
+  color: white;
+  border-radius: 2rem;
+}
+.price-data h3 {
+  margin-top: 1rem;
+}
+.cost {
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-evenly;
+}

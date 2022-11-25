@@ -60,5 +60,13 @@ def getDevice():
     res = fire.getDeviceById(id)
     return jsonify(res)
 
+@app.route('/getMeasurementById', methods=['POST', 'GET'])
+@cross_origin()
+def getMeasurementById():
+    fire = firestoreService()
+    id = request.form.get('idDevice')
+    res = fire.getMeasurement(id)
+    return jsonify(res)
+
 
 app.run()

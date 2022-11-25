@@ -17,7 +17,7 @@ const routes: Routes = [
     component: ConsumptionComponent,
     canActivate: [LoginGuardGuard],
   },
-  { path: 'chart', component: ChartComponent },
+  { path: 'chart/:var', component: ChartComponent },
 ];
 
 @NgModule({

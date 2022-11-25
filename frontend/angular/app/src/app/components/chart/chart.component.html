@@ -1,9 +1,22 @@
 <app-header></app-header>
+
+<div class="price-data">
+  <h3>Cost Consumption</h3>
+  <div class="cost">
+    <p>Device name: {{ currentDevice["name"] }}</p>
+    <p>Category: {{ currentDevice["category"] }}</p>
+  </div>
+  <div class="cost">
+    <p>Current Cost: {{ currentCost }} colones</p>
+    <p>Current Consumption: {{ currentConsumption }} kWh</p>
+  </div>
+</div>
 <div class="chartBar">
   <ngx-charts-bar-vertical
+    *ngIf="dataReceived"
     [view]="view"
     [scheme]="colorScheme"
-    [results]="single"
+    [results]="measurement"
     [gradient]="gradient"
     [xAxis]="showXAxis"
     [yAxis]="showYAxis"

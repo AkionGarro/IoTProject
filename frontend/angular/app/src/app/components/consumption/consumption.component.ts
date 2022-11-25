@@ -30,8 +30,7 @@ export class ConsumptionComponent implements OnInit {
   }
 
   detailsDevice(id: any) {
-    console.log(id);
-    this.router.navigate(['/chart']);
+    this.router.navigate(['/chart', id]);
   }
 
   onSubmit() {
