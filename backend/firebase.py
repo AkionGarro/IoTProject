@@ -43,10 +43,34 @@ class firestoreService():
             print('No se encuentra el usuario')
             return None;
 
+    def addUserDevice(self, device):
+        doc_ref = self.db.collection('Devices').document()
+        doc_ref.set({
+            'name': device.name,
+            'category': device.category,
+            'user': device.user,
+            'id': doc_ref.id,
+            'created': firestore.SERVER_TIMESTAMP
+        })
+        res = {'result': 'Success',
+               'Id': doc_ref.id}
+        return res
+
+    def getUserDevices(self, username):
+        docs = self.db.collection('Devices').where("user", "==", username).get()
+        services = []
+        for doc in docs:
+            print(f'{doc.id} => {doc.to_dict()}')
+            services.append(doc.to_dict())
+        return services
+
+    def getDeviceById(self, id):
+        docs = self.db.collection('Devices').where("id", "==", id).get()
+        if docs != []:
+            serviceRes = docs[0].to_dict()
+            return serviceRes
+        else:
+            print('No se encuentra el dispositivo')
+            return None;
 
 
-
-
-f1 = firestoreService()
-user = userLogin('David', 'david1234')
-f1.getUser(user)

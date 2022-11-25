@@ -16,4 +16,15 @@ export class FirestoreService {
   registerUser(user: any): Observable<any> {
     return this.client.post(this.BASE_URL + 'register', user);
   }
+
+  addDevice(device: any): Observable<any> {
+    return this.client.post(this.BASE_URL + 'addDevice', device);
+  }
+  getUserDevices(user: any): Observable<any> {
+    return this.client.post(this.BASE_URL + 'getUserDevices', user);
+  }
+
+  getDeviceById(id: any): Observable<any> {
+    return this.client.post(this.BASE_URL + 'getDeviceById', id);
+  }
 }
