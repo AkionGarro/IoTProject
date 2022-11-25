@@ -1,21 +1,22 @@
 <app-header></app-header>
 <div class="new-device">
   <h1>Smart Home Devices</h1>
-  <div class="d-flex justify-content-evenly">
-    <div class="d-flex flex-column align-items-center name">
-      <label for="deviceName">Device Name</label>
-      <input type="text" id="deviceName" />
+  <form [formGroup]="formDevice">
+    <div class="d-flex justify-content-evenly">
+      <div class="d-flex flex-column align-items-center name">
+        <label for="deviceName">Device Name</label>
+        <input formControlName="name" type="text" id="deviceName" />
+      </div>
+      <div class="d-flex flex-column align-items-center category">
+        <label for="">Category</label>
+        <select formControlName="category">
+          <option value="energy">Energy Device</option>
+          <option value="water">Water Device</option>
+        </select>
+      </div>
     </div>
-    <div class="d-flex flex-column align-items-center category">
-      <label for="">Category</label>
-      <select>
-        <option value="energy">Energy Device</option>
-        <option value="water">Water Device</option>
-      </select>
-    </div>
-  </div>
-
-  <button class="btn btn-primary" (click)="addDevice()">Add Device</button>
+    <button class="btn btn-primary" (click)="onSubmit()">Add Device</button>
+  </form>
 </div>
 
 <div class="user-devices">
@@ -41,7 +42,7 @@
             <td>{{ device["name"] }}</td>
             <td>{{ device["category"] }}</td>
             <td>
-              <button class="btn btn-primary">Consume</button>
+              <button class="btn btn-primary">View Consumption</button>
             </td>
           </tr>
         </tbody>
