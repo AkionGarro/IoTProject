@@ -29,7 +29,10 @@ export class ConsumptionComponent implements OnInit {
     this.getDevices();
   }
 
-  detailsDevice() {}
+  detailsDevice(id: any) {
+    console.log(id);
+    this.router.navigate(['/chart']);
+  }
 
   onSubmit() {
     this.submitted = true;
@@ -53,6 +56,7 @@ export class ConsumptionComponent implements OnInit {
     formData.append('user', localStorage.getItem('localUser'));
     this.api.getUserDevices(formData).subscribe((data) => {
       this.devices = data;
+      console.log(this.devices);
     });
   }
 }

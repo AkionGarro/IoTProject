@@ -33,16 +33,17 @@
           </tr>
         </thead>
         <tbody>
-          <tr
-            class="items"
-            *ngFor="let device of devices; index as i"
-            (click)="detailsDevice()"
-          >
+          <tr class="items" *ngFor="let device of devices; index as i">
             <td scope="row">{{ i + 1 }}</td>
             <td>{{ device["name"] }}</td>
             <td>{{ device["category"] }}</td>
             <td>
-              <button class="btn btn-primary">View Consumption</button>
+              <button
+                class="btn btn-primary"
+                (click)="detailsDevice(device['id'])"
+              >
+                View Consumption
+              </button>
             </td>
           </tr>
         </tbody>

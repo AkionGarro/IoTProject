@@ -10,6 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ConsumptionComponent } from './components/consumption/consumption.component';
 import { MatCard, MatCardModule } from '@angular/material/card';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ChartComponent } from './components/chart/chart.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +21,7 @@ import { MatCard, MatCardModule } from '@angular/material/card';
     RegisterComponent,
     LoginComponent,
     ConsumptionComponent,
+    ChartComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +30,8 @@ import { MatCard, MatCardModule } from '@angular/material/card';
     ReactiveFormsModule,
     HttpClientModule,
     MatCardModule,
+    NgxChartsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

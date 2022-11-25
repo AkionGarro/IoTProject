@@ -1,0 +1,8 @@
+.chartBar {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
